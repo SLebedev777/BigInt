@@ -181,33 +181,6 @@ int main()
 	test_compound_arithmetic(a, 22773, "-=", BigInt(-976286 - 22773));
 
 
-	/*
-	cout << "testing multiply" << endl;
-	a = BigInt(438);
-	a.MulByOneDigitNumber(2);
-	print_test_result<BigInt>(a, BigInt(876));
-
-	a = BigInt(438);
-	a.MulByOneDigitNumber(0);
-	print_test_result<BigInt>(a, BigInt(0));
-
-	a = BigInt(438);
-	a.MulByOneDigitNumber(1);
-	print_test_result<BigInt>(a, a);
-
-	a = BigInt(1234);
-	a.MulByOneDigitNumber(5);
-	print_test_result<BigInt>(a, BigInt(1234 * 5));
-
-	a = BigInt(9999);
-	a.MulByOneDigitNumber(9);
-	print_test_result<BigInt>(a, BigInt(9999 * 9));
-
-	a = BigInt("45758749445748340984845756848753");
-	a.MulByOneDigitNumber(7);
-	print_test_result<BigInt>(a, BigInt("320311246120238386893920297941271"));
-	*/
-
 	a = BigInt(12345);
 	test_compound_arithmetic(a, 12, "*=", BigInt(12345*12));
 	a = BigInt(12);
