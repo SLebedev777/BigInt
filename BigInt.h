@@ -26,6 +26,11 @@ public:
 	BigInt& operator%=(const BigInt& other);
 	// unary arithmetic
 	const BigInt operator-() const;
+	// increments/decrements
+	BigInt& operator++();  // prefix
+	BigInt& operator--();
+	BigInt operator++(int); // postfix
+	BigInt operator--(int);
 
 	// methods
 	void Negate();  // change sign in-place
