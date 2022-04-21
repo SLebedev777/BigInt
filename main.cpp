@@ -315,5 +315,41 @@ int main()
 	test_comparison(-BigInt(0), 0, "==", true);
 	test_comparison(BigInt("56473947575069476370556383057489"), BigInt("56473947575069476370556383057489"), "==", true);
 
+
+	cout << "testing increment/decrement" << endl;
+	{
+		BigInt a("1000000000000000000000000000000000000000000000000000000000000000000000000000");
+		BigInt b = a + 10000;
+		BigInt z(a);
+		BigInt step(1000);
+
+		cout << "\nfor loop: BigInt prefix increment" << endl;
+		for (; a < b; ++a)
+			if (a % step == 0)
+				cout << a << endl;
+
+		cout << "\nfor loop: BigInt prefix decrement" << endl;
+		for (; a >= z; --a)
+			if (a % step == 0)
+				cout << a << endl;
+
+		cout << "\nfor loop: BigInt postfix increment" << endl;
+		a = z;
+		for (; a < b; a++)
+			if (a % step == 0)
+				cout << a << endl;
+
+		cout << "\nfor loop: BigInt postfix decrement" << endl;
+		for (; a >= z; a--)
+			if (a % step == 0)
+				cout << a << endl;
+
+		cout << "\nfor loop: built-in int" << endl;
+		for (int a = 0; a < 100000; ++a)
+			if (a % 1000 == 0)
+				cout << a << " ";
+
+	}
+
 	return 0;
 }

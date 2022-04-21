@@ -256,6 +256,34 @@ BigInt& BigInt::operator%=(const BigInt& other)
 	return *this;
 }
 
+BigInt& BigInt::operator++()
+{
+	static const BigInt one("1");
+	*this += one;
+	return *this;
+}
+
+BigInt BigInt::operator++(int)
+{
+	BigInt tmp = *this;
+	++*this;
+	return tmp;
+}
+
+BigInt& BigInt::operator--()
+{
+	static const BigInt one("1");
+	*this -= one;
+	return *this;
+}
+
+BigInt BigInt::operator--(int)
+{
+	BigInt tmp = *this;
+	--*this;
+	return tmp;
+}
+
 
 void BigInt::Negate()
 {
